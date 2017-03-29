@@ -111,7 +111,7 @@ var descript = [
 
 var countryarr = [
 ["AUT","0,255,0"], ["HUN","138,43,226"], ["BEL","255,255,255"], ["BGR","255,255,255"], ["CZE","255,255,0"], ["DNK","135,206,235"], ["FIN","255,255,0"], ["FRA","127,255,0"], ["DEU","0,0,255"], ["GRC","218,165,32"], ["IRL","255,0,0"], ["ITA","255,192,203"], ["NLD","218,165,32"], ["NOR","135,206,235"], ["SWE","0,255,0"], ["POL","255,0,0"], ["PRT","0,255,0"], ["ROU","255,0,255"], ["RUS","138,43,226"], ["ESP","138,43,226"], ["CHE","255,125,0"], 
-//["GBR","255,125,0"], 
+///["GBR","255,125,0"], 
 ["PAK","255,125,0"], 
 ["SRB","70,130,180"], ["CHN","255,125,0"], ["HHH","0,0,255"], ["IND","255,0,0"], ["IRN","255,0,255"], ["ISR","218,165,32"], ["JPN","0,255,0"], ["JOR","0,255,0"], ["KOR","138,43,226"], ["PHL","255,255,255"], ["SYR","255,255,0"], ["TWN","255,0,0"], ["TUR","0,255,0"], ["VNM","0,255,0"], ["CAN","255,0,0"], ["MEX","255,125,0"], ["CUB","0,255,0"], ["DOM","255,192,203"], ["HTI","255,0,0"], ["JAM","70,130,180"], ["BLZ","255,192,203"], ["CRI","255,0,0"], ["SLV","255,255,255"], ["GTM","255,255,0"], ["HND","138,43,226"], ["NIC","218,165,32"], ["PAN","255,125,0"], ["ARG","255,0,255"], ["BOL","255,125,0"], ["BRA","255,192,203"], ["CHL","218,165,32"], ["COL","0,0,255"], ["ECU","135,206,235"], ["GUY","255,255,255"], ["PRY","255,0,0"], ["PER","127,255,0"], ["SUR","255,255,0"], ["URY","70,130,180"], ["VEN","0,255,0"], ["EGY","255,0,0"], ["ETH","255,0,255"], ["LBR","218,165,32"], ["MAR","218,165,32"], ["ZAF","255,0,0"], ["AUS","255,192,203"], ["NZL","0,255,0"],
 ["OOO","255,0,0"],
@@ -152,16 +152,16 @@ var ctydist = [
 
 var ctytotal = [10.5714, 44.0888, 139.4579, 270.4326, 197.5914, 273.4942, 523.5436, 360.7466, 726.2458, 617.0442, 416.9214, 68.9088, 81.6498, 240.5394, 314.0484, 411.9751, 581.8929, 961.8763, 997.3706, 102.6454, 104.6206, 101.2583, 97.104];
 
-var yr = 1820;
+var yr = 1940;
 
-var dotstotal = ctytotal[Math.floor(yr/10)-182]/10;
-var dotsactual = ctytotal[Math.floor(yr/10)-182]/10;
+var dotstotal = ctytotal[Math.floor(yr/10)-194]/10;
+var dotsactual = ctytotal[Math.floor(yr/10)-194]/10;
 
 var countrydist = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0];
 
 var testarr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,0,0,0];
 
-countrydist = sumarrays(countrydist,ctydist[Math.floor(yr/10)-182], yr);
+countrydist = sumarrays(countrydist,ctydist[Math.floor(yr/10)-194], yr);
 
 var speedmult = 2;
 var speedadjust = 0;
@@ -199,7 +199,7 @@ var svg = d3.select("svg").append("svg")
 
 
 
-var yearlabel = svg.append("text").attr("x", 452).attr("y", 658).text("1820").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
+var yearlabel = svg.append("text").attr("x", 452).attr("y", 658).text("1940").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
 
 
 var ystart = 520;
@@ -213,7 +213,7 @@ var font1 = "15px";
 var font2 = "20px";
 var rankoffset = 24;
 
-var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1990-1999").style("fill","rgb(200,200,200)").style("font-size",font2);
+var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1940-1950").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Total Migration").style("fill","grey").style("font-size",font1);
 var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2 + yoffset).text("24,434,322").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Countries").style("fill","grey").style("font-size",font1);
@@ -283,8 +283,9 @@ return my_array
 
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1820));
-     labelindex = Math.floor(yr/10)-182;
+     yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1940));
+     ///labelindex controls the movement of the Total migration
+     labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { labelindex = 19;}
 
      dotstotal = ctytotal[labelindex]/10;
@@ -305,7 +306,7 @@ return my_array
 
      labelindexold = labelindex;
 
-     var annualtotal = ctytotal[Math.floor(yr/10)-182]/10;
+     var annualtotal = ctytotal[Math.floor(yr/10)-194]/10;
      if (yr > 2009) { annualtotal = ctytotal[yr-1991]; }
 
 
@@ -313,7 +314,7 @@ if (yr%2 == 0){
      d3.selectAll(".group1").style("fill-opacity",function(d){
          var numdecade;
          if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
-         else {numdecade = ctydist[Math.floor(yr/10)-182][d.properties.num]; }
+         else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -321,7 +322,7 @@ if (yr%2 == 0){
      d3.selectAll(".group2").style("fill-opacity",function(d){
          var numdecade;
          if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
-         else {numdecade = ctydist[Math.floor(yr/10)-182][d.properties.num]; }
+         else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -332,7 +333,7 @@ if (yr%2 == 0){
   d3.select("#yearslider").on("change", function() {
         yr = this.value;
      yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1820));
-     labelindex = Math.floor(yr/10)-182;
+     labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { labelindex = 19;}
 
      dotstotal = ctytotal[labelindex]/10;
@@ -353,14 +354,14 @@ if (yr%2 == 0){
 
      labelindexold = labelindex;
 
-     var annualtotal = ctytotal[Math.floor(yr/10)-182]/10;
+     var annualtotal = ctytotal[Math.floor(yr/10)-194]/10;
      if (yr > 2009) { annualtotal = ctytotal[yr-1991]; }
 
 if (yr%2 == 0){
      d3.selectAll(".group1").style("fill-opacity",function(d){
          var numdecade;
          if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
-         else {numdecade = ctydist[Math.floor(yr/10)-182][d.properties.num]; }
+         else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -368,7 +369,7 @@ if (yr%2 == 0){
      d3.selectAll(".group2").style("fill-opacity",function(d){
          var numdecade;
          if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
-         else {numdecade = ctydist[Math.floor(yr/10)-182][d.properties.num]; }
+         else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -494,7 +495,7 @@ function timerfunction() {
         for (var i = 0; i < settings.density; i++) {
 
          
-          var bound = 1-speedmult*(0.2*ctytotal[Math.floor(yr/10)-182]/1000 + speedadjust);
+          var bound = 1-speedmult*(0.2*ctytotal[Math.floor(yr/10)-194]/1000 + speedadjust);
           if (Math.random() > bound && dotstotal > 0) {
             var n = selectfromdist(); //Math.random()*dotstotal);
             
@@ -553,18 +554,18 @@ if (d3.select("#playbutton").property("value") == "stop"){
 
      speedadjust = 0.2*dotstotal/100;  
      yr++;
-     if (yr == 2025) { yr = 1820;}
+     if (yr == 2025) { yr = 1940;}
     
 
 //console.log("time: " + totaltime + " / dotstotal: " + dotstotal + " / speedadj: " + speedadjust + " / countryarray: " + JSON.stringify(countrydist) + " / " + JSON.stringify(testarr));
 
 
      if (yr < 2014) {
-     yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1820));
+     yearlabel.text(yr).attr("x", 3.8*(yr-1820));
      d3.select("#yearslider")
 	.property("value", yr);
         
-     labelindex = Math.floor(yr/10)-182;
+     labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { labelindex = 19;}
      if(labelindex !== labelindexold) {
      decadelabel.transition().text(descript[labelindex][14]);
@@ -575,7 +576,7 @@ if (d3.select("#playbutton").property("value") == "stop"){
 
      }
      labelindexold = labelindex;
-
+     ///math.floor(yr/10)-182 = 0
      countrydist = sumarrays(countrydist, ctydist[Math.floor(yr/10)-182],yr);
      if (yr < 2010) {dotstotal = dotstotal + ctytotal[Math.floor(yr/10)-182]/10;}
      else {dotstotal = dotstotal + ctytotal[yr-1991];}
@@ -665,6 +666,12 @@ function selectfromdist(n) {
 
 
 });
+
+
+//if y is less than 2009, denominator is set to 1, otherwise it's 10
+//Then return an array of lenth 72 where each is the sum of the first array passed plus the second divded by denominator variable
+//ar2 being passed in is ctydist
+
 
 function sumarrays(ar1, ar2, y) {
       var denom = 10;
