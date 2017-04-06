@@ -203,8 +203,11 @@ var countryarr = [
 };
 */
 
+var year_start = 1940
+var year_end = 2013
+
 var descript = [
-[10,10,10,3,10,10,1,10,10,10,10,10,2,128502,"1820 to 1829"], 
+/*[10,10,10,3,10,10,1,10,10,10,10,10,2,128502,"1820 to 1829"], 
 [10,10,10,10,2,10,1,10,10,10,10,10,3,538381,"1830 to 1839"], 
 [10,10,10,10,2,10,1,10,10,10,10,10,3,1427337,"1840 to 1849"], 
 [10,10,10,10,2,10,1,10,10,10,10,10,3,2814554,"1850 to 1859"], 
@@ -216,6 +219,7 @@ var descript = [
 [3,10,10,10,10,10,10,1,10,10,10,2,10,6347380,"1910 to 1919"], 
 [1,10,10,10,10,10,10,2,3,10,10,10,10,4295510,"1920 to 1929"], 
 [1,10,10,10,2,10,10,3,10,10,10,10,10,699375,"1930 to 1939"], 
+*/
 [1,10,10,10,3,10,10,10,10,10,10,10,2,856608,"1940 to 1949"], 
 [2,10,10,10,1,10,10,10,3,10,10,10,10,2499268,"1950 to 1959"], 
 [2,10,10,10,10,10,10,10,1,10,10,10,3,3213749,"1960 to 1969"], 
@@ -224,9 +228,7 @@ var descript = [
 [10,10,10,10,10,10,10,10,1,2,3,10,10,9775398,"1990 to 1999"], 
 [10,3,10,10,10,10,10,10,1,2,10,10,10,10299430,"2000 to 2009"], 
 [10,3,10,10,10,10,10,10,1,2,10,10,10,4126849,"2010 to 2013"]
-
 ];
-
 
 /*
 var countryarr = [
@@ -274,7 +276,7 @@ var ctydist = [
 
 var ctytotal = [10.5714, 44.0888, 139.4579, 270.4326, 197.5914, 273.4942, 523.5436, 360.7466, 726.2458, 617.0442, 416.9214, 68.9088, 81.6498, 240.5394, 314.0484, 411.9751, 581.8929, 961.8763, 997.3706, 102.6454, 104.6206, 101.2583, 97.104];
 
-var yr = 1940;
+var yr = year_start;
 
 var dotstotal = ctytotal[Math.floor(yr/10)-194]/10;
 var dotsactual = ctytotal[Math.floor(yr/10)-194]/10;
@@ -406,10 +408,13 @@ return my_array
 
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1940));
+     yearlabel.text(yr).attr("x", 476 + 3.74*(yr-year_start));
      ///labelindex controls the movement of the Total migration
      labelindex = Math.floor(yr/10)-194;
-     if (yr > 2009) { labelindex = 19;}
+     if (yr > 2009) { 
+    	 labelindex = descript.len - 2;
+    	 console.log(labelindex)
+     }
 
      dotstotal = ctytotal[labelindex]/10;
 //     console.log(dotstotal)
@@ -459,10 +464,12 @@ if (yr%2 == 0){
 
   d3.select("#yearslider").on("change", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 452 + 3.74*(yr-1820));
+     yearlabel.text(yr).attr("x", 476 + 6*(yr-year_start));
      labelindex = Math.floor(yr/10)-194;
-     if (yr > 2009) { labelindex = 19;}
-
+     if (yr > 2009) { 
+    	 labelindex = descript.len - 2;
+    	 console.log(labelindex)
+     }
      dotstotal = ctytotal[labelindex]/10;
      
      if (yr > 2009) { dotstotal = ctytotal[labelindex];}
@@ -684,7 +691,7 @@ if (d3.select("#playbutton").property("value") == "stop"){
 
      speedadjust = 0.2*dotstotal/100;  
      yr++;
-     if (yr == 2025) { yr = 1940;}
+     if (yr == 2025) { yr = year_start;}
     
 
 //console.log("time: " + totaltime + " / dotstotal: " + dotstotal + " / speedadj: " + speedadjust + " / countryarray: " + JSON.stringify(countrydist) + " / " + JSON.stringify(testarr));
@@ -696,7 +703,10 @@ if (d3.select("#playbutton").property("value") == "stop"){
 	.property("value", yr);
         
      labelindex = Math.floor(yr/10)-194;
-     if (yr > 2009) { labelindex = 19;}
+/*     if (yr > 2009) { 
+    	 labelindex = descript.length - 2;
+     }
+*/     
      if(labelindex !== labelindexold) {
      decadelabel.transition().text(descript[labelindex][14]);
      migrationlabel.transition().text(d3.format("n")(descript[labelindex][13]));
