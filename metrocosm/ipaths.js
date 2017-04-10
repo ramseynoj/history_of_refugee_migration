@@ -220,14 +220,14 @@ var descript = [
 [1,10,10,10,10,10,10,2,3,10,10,10,10,4295510,"1920 to 1929"], 
 [1,10,10,10,2,10,10,3,10,10,10,10,10,699375,"1930 to 1939"], 
 */
-[1,10,10,10,3,10,10,10,10,10,10,10,2,856608,"1940 to 1949"], 
-[2,10,10,10,1,10,10,10,3,10,10,10,10,2499268,"1950 to 1959"], 
-[2,10,10,10,10,10,10,10,1,10,10,10,3,3213749,"1960 to 1969"], 
-[10,10,3,10,10,10,10,10,1,10,2,10,10,4248203,"1970 to 1979"], 
-[10,10,10,10,10,10,10,10,1,3,2,10,10,6244379,"1980 to 1989"], 
-[10,10,10,10,10,10,10,10,1,2,3,10,10,9775398,"1990 to 1999"], 
-[10,3,10,10,10,10,10,10,1,2,10,10,10,10299430,"2000 to 2009"], 
-[10,3,10,10,10,10,10,10,1,2,10,10,10,4126849,"2010 to 2013"]
+[1,2,3,10,10,10,10,10,10,10,10,10,10,10,856608,"1940 to 1949"], 
+[10,10,10,2,1,3,10,10,10,10,10,10,10,10,2499268,"1950 to 1959"], 
+[10,10,10,10,10,10,1,2,3,10,10,10,10,10,3213749,"1960 to 1969"], 
+[10,10,10,10,10,10,10,10,10,2,3,1,10,10,4248203,"1970 to 1979"], 
+[10,10,10,10,10,10,10,10,10,10,10,1,2,3,6244379,"1980 to 1989"], 
+[10,10,10,10,10,10,10,10,1,2,3,10,10,10,9775398,"1990 to 1999"], 
+[10,3,10,10,10,10,10,10,1,2,10,10,10,10,10299430,"2000 to 2009"], 
+[10,3,10,10,10,10,10,10,1,2,10,10,10,10,4126849,"2010 to 2013"]
 ];
 
 /*
@@ -344,7 +344,7 @@ var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ys
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Countries").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
-   .data([["Canada",0], ["China",1], ["Cuba",2], ["France",3], ["Germany",4], ["Hungary",5], ["Ireland",6], ["Italy",7], ["Mexico",8], ["Other Asia",9], ["Philippines",10], ["Russia",11], ["United Kingdom",12]])
+   .data([["World War II",0], ["Establishment of the Jewish State",1], ["Partition of India and Pakistan",2], ["Chinese Cultural Revolution",3], ["Formation of a communist government in North Vietnam",4], ["Soviet suppression of a Hungarian uprising",5], ["Vietnam War",6], ["Biafran War",7], ["Algerian war of independence",8], ["Soviet invasion of Afghanistan",9], ["Civil War in Mozambique",10], ["Bangadesh War of Independence",11], ["Civil War in Central America",12], ["Serbian revocation of Kosovo's independent status",13], ["Secessionist fighting in Georgia",14], ["Iraqi suppression of rebel movement",15], ["Rwandan genocide",16], ["Breakup of Yugoslavia",17]])
    .enter().append("text")
    .attr("x", xstart + xoffset + 30).attr("y",800)
    .text(function(d) { return d[0];} )
@@ -430,8 +430,8 @@ return my_array
 
      speedadjust = 0;
 
-     decadelabel.text(descript[labelindex][14]);
-     migrationlabel.text(d3.format("n")(descript[labelindex][13]));
+     decadelabel.text(descript[labelindex][descript[labelindex].length -1]);
+     migrationlabel.text(descript[labelindex][descript[labelindex].length -2]);
      ranklabels.transition().attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
@@ -481,8 +481,8 @@ if (yr%2 == 0){
 
      speedadjust = 0;
 
-     decadelabel.text(descript[labelindex][14]);
-     migrationlabel.text(d3.format("n")(descript[labelindex][13]));
+     decadelabel.text(descript[labelindex][15]);
+     migrationlabel.text(d3.format("n")(descript[labelindex][14]));
      ranklabels.transition().attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
@@ -568,7 +568,7 @@ context.globalAlpha = 1;
         this.life = 0;
         this.maxLife = 100;
 
-        this.sizeadj = 0.4 + Math.random()*4;
+        this.sizeadj = 1000 + Math.random()*4;
 
 //console.log(n)
 this.cty = countryarr[n];
@@ -708,8 +708,9 @@ if (d3.select("#playbutton").property("value") == "stop"){
      }
 */     
      if(labelindex !== labelindexold) {
-     decadelabel.transition().text(descript[labelindex][14]);
-     migrationlabel.transition().text(d3.format("n")(descript[labelindex][13]));
+     	console.log(labelindex)
+     decadelabel.transition().text(descript[labelindex][descript[labelindex].length -1]);
+     migrationlabel.transition().text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
      ranklabels.transition().duration(1000).attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
