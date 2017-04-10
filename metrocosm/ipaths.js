@@ -341,7 +341,7 @@ var rankoffset = 24;
 var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1940-1950").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Total Migration").style("fill","grey").style("font-size",font1);
 var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2 + yoffset).text("24,434,322").style("fill","rgb(200,200,200)").style("font-size",font2);
-svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Countries").style("fill","grey").style("font-size",font1);
+svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
    .data([["World War II",0], ["Establishment of the Jewish State",1], ["Partition of India and Pakistan",2], ["Chinese Cultural Revolution",3], ["Formation of a communist government in North Vietnam",4], ["Soviet suppression of a Hungarian uprising",5], ["Vietnam War",6], ["Biafran War",7], ["Algerian war of independence",8], ["Soviet invasion of Afghanistan",9], ["Civil War in Mozambique",10], ["Bangadesh War of Independence",11], ["Civil War in Central America",12], ["Serbian revocation of Kosovo's independent status",13], ["Secessionist fighting in Georgia",14], ["Iraqi suppression of rebel movement",15], ["Rwandan genocide",16], ["Breakup of Yugoslavia",17]])
