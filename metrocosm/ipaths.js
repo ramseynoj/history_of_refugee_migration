@@ -104,7 +104,7 @@ var countryarr = [
 ["AZE","255,255,255"],
 ["CHN","255,255,255"], 
 ["COL","135,206,235"],
-["CZE","255,255,0"], 
+["CZE","255,0,255"], 
 ["DZA","135,206,235"], 
 ["DZA2","135,206,235"], 
 ["ERI","255,255,0"], 
@@ -117,7 +117,7 @@ var countryarr = [
 ["IRQ","218,165,32"], 
 ["IRQ2","218,165,32"], 
 ["ISR","135,206,235"], 
-["IND","0,255,0"], 
+["IND","70,130,180"], 
 ["IDN","255,0,0"], 
 ["KHM","0,255,0"], 
 ["LAO","255,0,255"], 
@@ -127,7 +127,7 @@ var countryarr = [
 ["NGA","255,125,0"], 
 ["PAK","70,130,180"], 
 ["PSE","255,125,0"], 
-["POL","0,0,255"], 
+["POL","255,0,255"], 
 ["IND","255,0,0"], 
 ["RUS","255,0,255"], 
 ["RWA","255,255,0"], 
@@ -163,7 +163,8 @@ var descript = [
 //this object map decades to countries and their migration size
 var decadeCountries = [
 // 1940 to 1949
-[["RUS",10000000], ["POL", 1500000], ["CZE",1500000]],
+[["RUS",10000000], ["POL", 1500000], ["CZE",1500000], ["IND",7000000], ["PAK",7000000]],
+// 50s
 [["CHN",385000], ["VNM", 1000000,], ["HUN", 200000 ]],
 [["DZA",1200000 ],["DZA2",1200000], ["RWA", 150000], ["RWA2", 150000], ["RWA3", 150000], ["VNM2",2700000], ["ISR",300000 ], ["NGA", 2000000]],
 [["PAK",10000000],["UGA", 50000],["UGA2", 50000],["UGA3", 50000],["LAO",120000],["KHM", 375000],["MOZ", 5700000],["MMR", 250000], ["ERI", 500000],["ETH",620000], ["AFG",6300000],["ZWE",210000],["ZWE2",210000],["ZWE3",210000]],
@@ -203,11 +204,10 @@ for (var i in decadeCountries) {
 		index = findIndex(decadeCountries[i][j][0]);
 		//console.log(i,index,ctydist[i][index]);
 		// get the number of migrants
-		ctydist[i][index] = decadeCountries[i][j][1] / 100000;
+		ctydist[i][index] = decadeCountries[i][j][1] / 50000;
 	}
 }
 
-console.log(ctydist)
 /*
 var ctydist = [
 // 1940- 1950: RUS (index=29), POL(27), CZE(4). They current have values 10 now, but should be changed to whatever suitable values
@@ -264,7 +264,7 @@ var ctydist = [
 */
 
 
-var ctytotal = [150, 150, 150, 1500, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150];
+var ctytotal = [600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600];
 // [10.5714, 44.0888, 139.4579, 270.4326, 197.5914, 273.4942, 523.5436, 360.7466, 726.2458, 617.0442, 416.9214, 68.9088, 81.6498, 240.5394, 314.0484, 411.9751, 581.8929, 961.8763, 997.3706, 102.6454, 104.6206, 101.2583, 97.104];
 
 var yr = year_start;
@@ -333,37 +333,46 @@ var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ys
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
-   .data([["World War II",0], 
-          ["Establishment of the Jewish State",1], 
-          ["Partition of India and Pakistan",2], 
-          ["Chinese Cultural Revolution",3], 
-          ["Formation of a communist government in North Vietnam",4], 
-          ["Soviet suppression of a Hungarian uprising",5], 
-          ["Vietnam War",6], 
-          ["Biafran War",7], 
-          ["Algerian war of independence",8], 
-          ["Soviet invasion of Afghanistan",9], 
-          ["Civil War in Mozambique",10], 
-          ["Bangadesh War of Independence",11], 
-          ["Civil War in Central America",12], 
-          ["Serbian revocation of Kosovo's independent status",13], 
-          ["Secessionist fighting in Georgia",14], 
-          ["Iraqi suppression of rebel movement",15], 
-          ["Rwandan genocide",16], 
+   .data([["World War II",0, "RUS"], 
+          ["Establishment of the Jewish State",1, ], 
+          ["Partition of India and Pakistan",2, "IND"], 
+          ["Chinese Cultural Revolution",3, "CHN"], 
+          ["Formation of a communist government in North Vietnam",4, "VNM"], 
+          ["Soviet suppression of a Hungarian uprising",5, "HUN"], 
+          ["Vietnam War",6, "VNM2"], 
+          ["Biafran War",7, "NGA"], 
+          ["Algerian war of independence",8, "DZA"], 
+          ["Soviet invasion of Afghanistan",9, "AFG"], 
+          ["Civil War in Mozambique",10, "MOZ"], 
+          ["Bangadesh War of Independence",11, "MMR"], 
+          ["Civil War in Central America",12, "NIC"], 
+          ["Serbian revocation of Kosovo's independent status",13, "SRB"], 
+          ["Secessionist fighting in Georgia",14, "GEO"], 
+          ["Iraqi suppression of rebel movement",15, "IRQ"], 
+          ["Rwandan genocide",16, "RWA"], 
           ["Breakup of Yugoslavia",17],          
-          ["Civil conflict in Columbia", 18],
-          ["US Invasion of Iraq", 19],
+          ["Civil conflict in Columbia", 18, "COL"],
+          ["US Invasion of Iraq", 19, "IRQ"],
           ["", 20],
           ["War in Syria", 21],
-          ["Civil conflict in Columbia", 22],
+          ["Civil conflict in Columbia", 22, "COL"],
           ["South Sudanese Civil War", 23]]
           )
           
    .enter().append("text")
    .attr("x", xstart + xoffset + 30).attr("y",800)
    .text(function(d) { return d[0];} )
-   .style("fill","rgb(200,200,200)").style("font-size",font2);
+   .style("fill", function(d) {
+	   idx = findIndex(d[2]);
+	   if (idx >= 0)
+		   colorStr = countryarr[idx][1];
+	   else
+		   colorStr = "200,200,200" // gray
+	   return "rgb(" + colorStr + ")"; 
+	   }) //("fill","rgb(200,200,200)").
+   .style("font-size",font2);
 
+console.log(ranklabels)
 var labelindex = 0;
 var labelindexold = 9999;
 
