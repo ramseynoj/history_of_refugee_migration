@@ -128,7 +128,7 @@ var countryarr = [
 ["DZA","135,206,235"], 
 ["DZA2","135,206,235"], 
 ["ERI","255,255,0"], 
-["ETH","127,255,0"], 
+["ETH","255,0,255"], 
 ["GEO","0,0,255"], 
 ["GTM","255,125,02"], 
 ["GTM2","255,125,0"], 
@@ -139,7 +139,7 @@ var countryarr = [
 ["ISR","135,206,235"], 
 ["IND","70,130,180"], 
 ["IDN","255,0,0"], 
-["KHM","0,255,0"], 
+["KHM","0,255,255"], 
 ["LAO","255,0,255"], 
 ["MMR","138,43,226"], 
 ["MOZ","255,192,203"], 
@@ -150,9 +150,9 @@ var countryarr = [
 ["POL","255,0,255"], 
 ["IND","255,0,0"], 
 ["RUS","255,0,255"], 
-["RWA","255,255,0"], 
-["RWA2","255,255,0"], 
-["RWA3","255,255,0"], 
+["RWA","138,43,226"], 
+["RWA2","138,43,226"], 
+["RWA3","138,43,226"], 
 ["SLV","255,125,0"], 
 ["SRB","0,255,0"],
 ["SUD","255,255,0"], 
@@ -292,7 +292,7 @@ var ctydist = [
 */
 
 
-var ctytotal = [600, 300, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600];
+var ctytotal = [600, 300, 600, 600, 600, 900, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600];
 // [10.5714, 44.0888, 139.4579, 270.4326, 197.5914, 273.4942, 523.5436, 360.7466, 726.2458, 617.0442, 416.9214, 68.9088, 81.6498, 240.5394, 314.0484, 411.9751, 581.8929, 961.8763, 997.3706, 102.6454, 104.6206, 101.2583, 97.104];
 
 var yr = year_start;
@@ -352,11 +352,11 @@ var xstart = 40;
 var xoffset = 10;
 
 var font1 = "15px";
-var font2 = "20px";
+var font2 = "18px";
 var rankoffset = 24;
 
 var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1940-1950").style("fill","rgb(200,200,200)").style("font-size",font2);
-svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Total Migration").style("fill","grey").style("font-size",font1);
+svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Decade's Total Migration").style("fill","grey").style("font-size",font1);
 var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2 + yoffset).text("24,434,322").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
 
