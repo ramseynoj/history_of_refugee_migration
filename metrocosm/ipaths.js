@@ -150,6 +150,7 @@ var countryarr = [
 ["POL","255,0,255"], 
 ["IND","255,0,0"], 
 ["RUS","255,0,255"], 
+//["RUS", "200,100,0"],
 ["RWA","138,43,226"], 
 ["RWA2","138,43,226"], 
 ["RWA3","138,43,226"], 
@@ -224,6 +225,16 @@ function findIndex(countryCode) {
 		}
 	}
 	return -1;
+}
+
+function findColor(countryCode) {
+	for (var i in countryarr) {
+		if (countryCode == countryarr[i][0].slice(0,3)) {
+			console.log(countryarr[i][0]);
+			return ("rgb(" + countryarr[i][1] + ")");
+		}
+	}
+	return "rgb(0,0,0)";
 }
 
 for (var i in decadeCountries) {
@@ -307,7 +318,6 @@ countrydist = sumarrays(countrydist,ctydist[Math.floor(yr/10)-194], yr);
 
 var speedmult = 0.7;
 var speedadjust = 0;
-
 
 
 var opacityscale = d3.scale.sqrt().domain([0,2,30,100,300]).range([0,0,0.7,0.9,0.99]);
@@ -412,6 +422,7 @@ svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2*2 + y
 svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2*2 + yoffset + rankoffset*3).text("3.").style("fill","rgb(200,200,200)").style("font-size",font2);
 
 
+
 d3.json("worldc11.json", function(error, world) {
   if (error) throw error;
 
@@ -428,6 +439,8 @@ while(x < len){
 return my_array
 }
 
+
+
   var g = svg.append("g");
   var worldmap =
     g.selectAll("path")
@@ -437,10 +450,15 @@ return my_array
       .attr("d", path)
       .style("stroke","rgb(255,255,255)")
       .style("stroke-width",0.5)
-      .style("fill", function(d) {
+      //.style("fill", "blue")
+	  .style("fill", function(d) {return findColor(d.properties.adm0_a3);})
+	  //function(d) {
+		  //console.log(d.properties.adm0_a3, console.log(findColor(d.properties.adm0_a3));
+		  //findColor(d.properties.adm0_a3)
            // if (d.properties.adm0_a3 == "USA") {return "black";}
            // if (d.properties.adm0_a3 == "RUS") {return "rgb(138,43,226)";}
            // return colors[d.properties.mapcolor13];
+		   /*
             if (d.properties.adm0_a3 == "AFG") {return "blue";}
 			if (d.properties.adm0_a3 == "ARM") {return "blue";}
 			if (d.properties.adm0_a3 == "AZE") {return "blue";}
@@ -475,14 +493,17 @@ return my_array
 			if (d.properties.adm0_a3 == "UGA") {return "blue";}
 			if (d.properties.adm0_a3 == "VNM") {return "blue";}
 			if (d.properties.adm0_a3 == "ZWE") {return "blue";}
+		  
+		  
             return "black";
-       })
+			*/
+	  //})
        .attr("class",function(d){
          
            if (d.properties.adm0_a3 == "USA") {return "usa";}
            else { return "other"; }
        })
-       .style("stroke-opacity", 0.6)
+       .style("stroke-opacity", 0.7)
        .style("fill-opacity", 0)
        .attr("class",function(d){ if (d.properties.num > 36) {return "group1";} else { return "group2";} });
 
@@ -585,7 +606,9 @@ if (yr%2 == 0){
 } else {
      d3.selectAll(".group2").style("fill-opacity",function(d){
          var numdecade;
-         if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
+         //if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
+         //else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
+		 if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
          else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
@@ -744,8 +767,9 @@ function timerfunction() {
     gradient.addColorStop(0.4, 'rgba('+ '255,255,255' + ',' + opacityscale(usascale)*0.3 +')');
     gradient.addColorStop(0.8, 'rgba('+ '255,255,255' + ',' + opacityscale(usascale)*0.1 +')');
     gradient.addColorStop(1.0, 'rgba('+ '255,255,255' + ',0)');
-    context.fillStyle = gradient;
-    context.fill();
+    //disabled the 'splash' effect in USA
+	//context.fillStyle = gradient;
+    //context.fill();
 
 
 
@@ -815,7 +839,8 @@ if (yr%2 == 0){
          var numdecade;
 //       if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
 //       else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
-         numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
+         //numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.num)];
+		 numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.adm0_a3)]*5;
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -824,7 +849,8 @@ if (yr%2 == 0){
          var numdecade;
 //       if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
 //       else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
-         numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
+         numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.adm0_a3)]*5;
+		 //numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
