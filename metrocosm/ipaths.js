@@ -382,33 +382,37 @@ var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ys
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
-   .data([["Post World War II",0, "RUS"], 
-          ["Partition of India and Pakistan",1, "IND"], 
-          ["Establishment of the Jewish State",2, "PSE" ], 
-          ["Chinese Cultural Revolution",3, "CHN"], 
-          ["Formation of a communist government in North Vietnam",4, "VNM"], 
-          ["Soviet suppression of a Hungarian uprising",5, "HUN"], 
-          ["Vietnam War",6, "VNM2"], 
-          ["Biafran War",7, "NGA"], 
-          ["Algerian war of independence",8, "DZA"], 
-          ["Soviet invasion of Afghanistan",9, "AFG"], 
-          ["Civil War in Mozambique",10, "MOZ"], 
-          ["Bangadesh War of Independence",11, "MMR"], 
-          ["Civil War in Central America",12, "NIC"], 
-          ["Serbian revocation of Kosovo's independent status",13, "SRB"], 
-          ["Secessionist fighting in Georgia",14, "GEO"], 
-          ["Iraqi suppression of rebel movement",15, "IRQ"], 
-          ["Rwandan genocide",16, "RWA"], 
-          ["Breakup of Yugoslavia",17, "BIH"],          
-          ["Civil conflict in Columbia", 18, "COL"],
-          ["US Invasion of Iraq", 19, "IRQ"],
+   .data([["Post World War II",0, "RUS", "https://en.wikipedia.org/wiki/World_War_II_evacuation_and_expulsion"], 
+          ["Partition of India and Pakistan",1, "IND", "https://en.wikipedia.org/wiki/Partition_of_India"], 
+          ["Establishment of the Jewish State",2, "PSE", "https://en.wikipedia.org/wiki/Jewish_state"], 
+          ["Chinese Cultural Revolution",3, "CHN", "https://en.wikipedia.org/wiki/Cultural_Revolution"], 
+          ["Formation of a communist government in North Vietnam",4, "VNM", "https://en.wikipedia.org/wiki/Communism_in_Vietnam"], 
+          ["Soviet suppression of a Hungarian uprising",5, "HUN", "https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1956"], 
+          ["Vietnam War",6, "VNM2", "https://en.wikipedia.org/wiki/Vietnam_War"], 
+          ["Biafran War",7, "NGA", "https://en.wikipedia.org/wiki/Nigerian_Civil_War"], 
+          ["Algerian war of independence",8, "DZA", "https://en.wikipedia.org/wiki/Algerian_War"], 
+          ["Soviet invasion of Afghanistan",9, "AFG", "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War"], 
+          ["Civil War in Mozambique",10, "MOZ", "https://en.wikipedia.org/wiki/Mozambican_Civil_War"], 
+          ["Bangaladesh War of Independence",11, "MMR", "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War"], 
+          ["Civil War in Central America",12, "NIC", "https://en.wikipedia.org/wiki/Salvadoran_Civil_War"], 
+          ["Serbian revocation of Kosovo's independent status",13, "SRB", "https://en.wikipedia.org/wiki/Anti-bureaucratic_revolution"], 
+          ["Secessionist fighting in Georgia",14, "GEO", "https://en.wikipedia.org/wiki/Georgian_Civil_War"], 
+          ["Iraqi suppression of rebel movement",15, "IRQ", "https://en.wikipedia.org/wiki/1991_uprisings_in_Iraq"], 
+          ["Rwandan genocide",16, "RWA", "https://en.wikipedia.org/wiki/Rwandan_genocide"], 
+          ["Breakup of Yugoslavia",17, "BIH", "https://en.wikipedia.org/wiki/Breakup_of_Yugoslavia"],          
+          ["Civil conflict in Colombia", 18, "COL", "https://en.wikipedia.org/wiki/Colombian_conflict"],
+          ["US Invasion of Iraq", 19, "IRQ", "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq"],
           ["", 20],
-          ["War in Syria", 21, "SYR"],
-          ["Civil conflict in Columbia", 22, "COL"],
-          ["South Sudanese Civil War", 23, "SSD"]]
+          ["War in Syria", 21, "SYR", "https://en.wikipedia.org/wiki/Syrian_Civil_War"],
+          ["Civil conflict in Columbia", 22, "COL", "https://en.wikipedia.org/wiki/Colombian_conflict"],
+          ["South Sudanese Civil War", 23, "SSD", "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War"]]
           )
           
-   .enter().append("text")
+   .enter()
+   .append("svg:a")
+   .attr("xlink:href", function(d){return d[3];})
+   .attr("target", "_newtab")
+   .append("text")
    .attr("x", xstart + xoffset + 30).attr("y",800)
    .text(function(d) { return d[0];} )
    .style("fill", function(d) {
