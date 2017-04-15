@@ -8,9 +8,8 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=2,user-scalable=yes' />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
-
-<script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/d3.geo.projection.v0.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
 
 
 
@@ -19,7 +18,7 @@
         body { margin:0; padding:0; background-color:rgb(0,0,0); width:1300px; height:740px; margin:0; padding:0;}
         #map { position:absolute; top:0; bottom:0; width:100%; }
   .canvastop { position:absolute; top:0; left:0; pointer-events: none;}
-  svg { position:absolute; top:0; left:0; display: inline-block; pointer-events:none;}
+  svg { position:absolute; top:5px; left:0; display: inline-block; pointer-events:none;}
   path {pointer-events:none;}
   .popover {opacity: 0.88 !important;}
   .popover :nth-child(2) {background-color: rgb(220,220,220) !important;}
@@ -172,13 +171,16 @@ position:absolute; top:670px;
 }
 
     </style>
+
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani|Source+Serif+Pro" rel="stylesheet">
+
 </head>
 <body>
 
-<style>
-
-
-</style>
+<div class="map_title">
+  <h1>Visualization of Refugee Migration Since 1940 <span>(1 Dot = 10k Migrants)</span></h1>
+</div>
 
 <svg version="1.1" id="svg"  Width="1300" Height="740" ></svg>
         <canvas  Width="1300" Height="740" id="canvas"></canvas>
@@ -189,7 +191,6 @@ position:absolute; top:670px;
         <div class="slidecontainer"><input type="range" step="1" defaultValue="1940" min="1940" max="2015" value="1940" id="yearslider"></div>
 
 <script src="ipaths.js"></script>
-
 
 </body>
 </html>
