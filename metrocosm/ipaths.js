@@ -123,7 +123,7 @@ var countryarr = [
 ["AZE","255,255,255"],
 ["BIH", "135,206,235"],
 ["CHN","255,255,255"], 
-["COL","100,200,200"],
+["COL","100,255,255"],
 ["CZE","255,0,255"], 
 ["DZA","135,206,235"], 
 ["DZA2","135,206,235"], 
@@ -141,7 +141,7 @@ var countryarr = [
 ["IDN","255,100,0"], 
 ["KHM","100,0,255"], 
 ["LAO","255,0,255"], 
-["MMR","0,255,255"], 
+["MMR","0,200,200"], 
 ["MOZ","255,192,203"], 
 ["NIC","255,125,0"], 
 ["NGA","255,125,0"], 
@@ -262,9 +262,11 @@ for (var i in decadeCountries) {
 		index = findIndex(decadeCountries[i][j][0]);
 		//console.log(i,index,ctydist[i][index]);
 		// get the number of migrants
-		ctydist[i][index] = decadeCountries[i][j][1] / 50000;
+		ctydist[i][index] = decadeCountries[i][j][1] / 10000;
 	}
 }
+
+var ctytotal = [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000];
 
 /*
 var ctydist = [
@@ -322,7 +324,6 @@ var ctydist = [
 */
 
 
-var ctytotal = [600, 300, 600, 600, 600, 900, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600];
 // [10.5714, 44.0888, 139.4579, 270.4326, 197.5914, 273.4942, 523.5436, 360.7466, 726.2458, 617.0442, 416.9214, 68.9088, 81.6498, 240.5394, 314.0484, 411.9751, 581.8929, 961.8763, 997.3706, 102.6454, 104.6206, 101.2583, 97.104];
 
 var yr = year_start;
@@ -879,7 +880,7 @@ if (yr%2 == 0){
                  opacscale = opacityscale(countryScale);        		 
         	 }        	 
          }
-         return opacscale;
+         return opacscale * 0.75;
      });
 } else {
      d3.selectAll(".group2").transition().duration(1000).style("fill-opacity",function(d){
@@ -898,7 +899,7 @@ if (yr%2 == 0){
                  opacscale = opacityscale(countryScale);        		 
         	 }        	 
          }
-         return opacscale;
+         return opacscale * 0.75;
 /*
     	 var numdecade;
 //       if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
