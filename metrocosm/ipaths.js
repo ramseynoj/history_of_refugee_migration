@@ -123,7 +123,7 @@ var countryarr = [
 ["AZE","255,255,255"],
 ["BIH", "135,206,235"],
 ["CHN","255,255,255"], 
-["COL","135,206,235"],
+["COL","100,200,200"],
 ["CZE","255,0,255"], 
 ["DZA","135,206,235"], 
 ["DZA2","135,206,235"], 
@@ -138,14 +138,14 @@ var countryarr = [
 ["IRQ2","218,165,32"], 
 ["ISR","255,0,255"], 
 ["IND","70,130,180"], 
-["IDN","255,0,0"], 
-["KHM","0,255,255"], 
+["IDN","255,100,0"], 
+["KHM","100,0,255"], 
 ["LAO","255,0,255"], 
-["MMR","138,43,226"], 
+["MMR","0,255,255"], 
 ["MOZ","255,192,203"], 
 ["NIC","255,125,0"], 
 ["NGA","255,125,0"], 
-["PAK","255,125,0"],  
+["PAK","50,100,180"], 
 ["PSE","255,125,0"], 
 ["POL","255,0,255"], 
 ["RUS","255,0,255"], 
@@ -163,7 +163,7 @@ var countryarr = [
 ["SYR5","0,255,0"],
 ["SYR6","0,255,0"],
 ["SYR7","0,255,0"],
-["TJK","138,43,226"], 
+["TJK","255,255,0"], 
 ["UGA","255,255,255"], 
 ["UGA2","255,255,255"], 
 ["UGA3","255,255,255"], 
@@ -387,7 +387,7 @@ var rankoffset = 24;
 var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1940-1950").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Decade's Total Migration").style("fill","grey").style("font-size",font1);
 var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2 + yoffset).text("24,434,322").style("fill","rgb(200,200,200)").style("font-size",font2);
-svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
+svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events (Click Event Name to Learn More)").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
    .data([["Post World War II",0, "RUS", "https://en.wikipedia.org/wiki/World_War_II_evacuation_and_expulsion"], 
