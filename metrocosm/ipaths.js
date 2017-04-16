@@ -387,7 +387,7 @@ var rankoffset = 24;
 var decadelabel = svg.append("text").attr("x", xstart).attr("y", ystart).text("1940-1950").style("fill","rgb(200,200,200)").style("font-size",font2);
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2).text("Decade's Total Migration").style("fill","grey").style("font-size",font1);
 var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2 + yoffset).text("24,434,322").style("fill","rgb(200,200,200)").style("font-size",font2);
-svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
+svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events (Click Event Name to Learn More)").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
    .data([["Post World War II",0, "RUS", "https://en.wikipedia.org/wiki/World_War_II_evacuation_and_expulsion"], 
