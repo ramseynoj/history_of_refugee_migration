@@ -1,0 +1,24 @@
+h1 {
+	margin-top: 5px;
+	color: #c68000;
+	text-align: center;
+	font-family: 'Mukta Vaani', sans-serif;
+}
+
+span {
+
+	color: #818181;
+}
+
+text {
+	font-family: 'Source Serif Pro', serif;
+}
+
+.map_title {
+	display: block;
+	margin-bottom: 50px;
+}
+
+.map {
+	padding-top: 50px;
+}
