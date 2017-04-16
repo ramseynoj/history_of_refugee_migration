@@ -79,9 +79,9 @@ var pathobject = {
 // Kosovo/Serbia - Western Europe [677,281]
 // -> Albania, Macedonia, Montenegro, Western Europe
 "SRB": [[715,301],[715,301],[714,301],[714,301],[714,301],[713,302],[713,302],[712,302],[712,302],[712,302],[711,302],[711,302],[710,302],[710,302],[710,302],[709,302],[709,302],[708,302],[708,302],[708,302],[707,302],[707,302],[707,302],[706,303],[706,303],[705,302],[705,302],[705,302],[704,302],[704,302],[703,302],[703,302],[703,302],[702,302],[702,302],[701,302],[701,302],[701,302],[700,302],[700,302],[700,302],[699,302],[699,302],[698,301],[698,301],[698,301],[697,301],[697,301],[696,301],[696,301],[696,301],[695,300],[695,300],[694,300],[694,300],[694,300],[693,300],[693,300],[692,299],[692,299],[692,299],[691,299],[691,299],[691,299],[690,298],[690,298],[689,297],[689,297],[689,297],[688,297],[688,297],[687,296],[687,296],[687,296],[686,295],[686,295],[685,294],[685,294],[685,294],[684,293],[684,293],[684,293],[683,292],[683,292],[682,291],[682,291],[682,291],[681,290],[681,290],[680,288],[680,288],[680,288],[679,287],[679,287],[678,285],[678,285],[678,285],[677,282],[677,282],[677,282]],
-// Sudan civil war
-"SUD": [[740,405],[740,405],[740,405],[740,405],[740,405],[741,403],[741,403],[741,403],[741,403],[741,403],[742,401],[742,401],[742,401],[742,401],[742,401],[743,400],[743,400],[743,400],[743,400],[743,400],[744,398],[744,398],[744,398],[744,398],[744,398],[745,397],[745,397],[745,397],[745,397],[745,397],[746,396],[746,396],[746,396],[746,396],[746,396],[747,396],[747,396],[747,396],[747,396],[747,396],[748,395],[748,395],[748,395],[748,395],[748,395],[749,394],[749,394],[749,394],[749,394],[749,394],[750,394],[750,394],[750,394],[750,394],[750,394],[751,393],[751,393],[751,393],[751,393],[751,393],[752,393],[752,393],[752,393],[752,393],[752,393],[753,392],[753,392],[753,392],[753,392],[753,392],[754,392],[754,392],[754,392],[754,392],[754,392],[755,392],[755,392],[755,392],[755,392],[755,392],[756,392],[756,392],[756,392],[756,392],[756,392],[757,392],[757,392],[757,392],[757,392],[757,392],[758,392],[758,392],[758,392],[758,392],[758,392],[759,392],[759,392],[759,392],[759,392],[759,392]],
-"SUD2":[[759,398],[759,398],[759,398],[759,398],[759,398],[758,400],[758,400],[758,400],[758,400],[758,400],[757,402],[757,402],[757,402],[757,402],[757,402],[756,404],[756,404],[756,404],[756,404],[756,404],[755,405],[755,405],[755,405],[755,405],[755,405],[754,406],[754,406],[754,406],[754,406],[754,406],[753,407],[753,407],[753,407],[753,407],[753,407],[752,408],[752,408],[752,408],[752,408],[752,408],[751,408],[751,408],[751,408],[751,408],[751,408],[750,409],[750,409],[750,409],[750,409],[750,409],[749,409],[749,409],[749,409],[749,409],[749,409],[748,410],[748,410],[748,410],[748,410],[748,410],[747,410],[747,410],[747,410],[747,410],[747,410],[746,411],[746,411],[746,411],[746,411],[746,411],[745,411],[745,411],[745,411],[745,411],[745,411],[744,411],[744,411],[744,411],[744,411],[744,411],[743,411],[743,411],[743,411],[743,411],[743,411],[742,411],[742,411],[742,411],[742,411],[742,411],[741,411],[741,411],[741,411],[741,411],[741,411],[740,412],[740,412],[740,412],[740,412],[740,412]],
+// South Sudan civil war
+"SSD": [[740,434],[740,433],[740,433],[740,433],[740,433],[740,433],[741,432],[741,432],[741,432],[741,432],[741,432],[741,432],[742,432],[742,432],[742,432],[742,432],[742,432],[743,431],[743,431],[743,431],[743,431],[743,431],[743,431],[744,431],[744,431],[744,431],[744,431],[744,431],[745,431],[745,431],[745,431],[745,431],[745,431],[745,431],[746,431],[746,431],[746,431],[746,431],[746,431],[747,431],[747,431],[747,431],[747,431],[747,431],[747,431],[748,431],[748,431],[748,431],[748,431],[748,431],[748,431],[749,431],[749,431],[749,431],[749,431],[749,431],[750,431],[750,431],[750,431],[750,431],[750,431],[750,431],[751,431],[751,431],[751,431],[751,431],[751,431],[752,432],[752,432],[752,432],[752,432],[752,432],[752,432],[753,432],[753,432],[753,432],[753,432],[753,432],[754,433],[754,433],[754,433],[754,433],[754,433],[754,433],[755,433],[755,433],[755,433],[755,433],[755,433],[756,434],[756,434],[756,434],[756,434],[756,434],[756,434],[757,435],[758,435],[758,436],[758,437],[758,438]],
+"SSD2":[[757,437],[757,437],[757,437],[757,437],[757,437],[756,438],[756,438],[756,438],[756,438],[756,438],[756,438],[755,439],[755,439],[755,439],[755,439],[755,439],[754,439],[754,439],[754,439],[754,439],[754,439],[754,439],[753,439],[753,439],[753,439],[753,439],[753,439],[752,439],[752,439],[752,439],[752,439],[752,439],[752,439],[751,439],[751,439],[751,439],[751,439],[751,439],[750,440],[750,440],[750,440],[750,440],[750,440],[750,440],[749,439],[749,439],[749,439],[749,439],[749,439],[748,439],[748,439],[748,439],[748,439],[748,439],[748,439],[747,439],[747,439],[747,439],[747,439],[747,439],[747,439],[746,439],[746,439],[746,439],[746,439],[746,439],[745,439],[745,439],[745,439],[745,439],[745,439],[745,439],[744,438],[744,438],[744,438],[744,438],[744,438],[743,437],[743,437],[743,437],[743,437],[743,437],[743,437],[742,437],[742,437],[742,437],[742,437],[742,437],[741,436],[741,436],[741,436],[741,436],[741,436],[741,436],[740,435],[740,435],[740,435],[740,435],[740,435],[740,435]],
 // SYR -> Turkey [770,315], Lebanon [766,337], Jordan [769,349], Western Europe (Germany [675,264], France [653,284], UK [636,248], Hungary [709,282])
 "SYR": [[778,336],[777,335],[776,335],[776,335],[774,334],[774,334],[774,334],[774,334],[774,334],[773,333],[773,333],[773,333],[773,333],[773,333],[772,332],[772,332],[772,332],[772,332],[772,332],[771,331],[771,331],[771,331],[771,331],[770,330],[770,330],[770,330],[770,330],[770,330],[770,329],[770,329],[770,329],[770,329],[770,329],[769,328],[769,328],[769,328],[769,328],[769,328],[769,327],[769,327],[769,327],[769,327],[768,326],[768,326],[768,326],[768,326],[768,326],[768,325],[768,325],[768,325],[768,325],[768,325],[768,324],[768,324],[768,324],[768,324],[768,324],[768,323],[768,323],[768,323],[768,323],[768,322],[768,322],[768,322],[768,322],[768,322],[768,321],[768,321],[768,321],[768,321],[768,321],[768,320],[768,320],[768,320],[768,320],[768,320],[768,319],[768,319],[768,319],[768,319],[768,318],[768,318],[768,318],[768,318],[768,318],[768,317],[768,317],[768,317],[768,317],[768,317],[768,316],[768,316],[768,316],[768,316],[768,316],[769,315],[769,315],[769,315],[769,315],[769,315]],
 // Lebanon [766,337]
@@ -136,7 +136,7 @@ var countryarr = [
 ["HUN","255,192,203"], 
 ["IRQ","218,165,32"], 
 ["IRQ2","218,165,32"], 
-["ISR","135,206,235"], 
+["ISR","255,0,255"], 
 ["IND","70,130,180"], 
 ["IDN","255,0,0"], 
 ["KHM","0,255,255"], 
@@ -145,18 +145,17 @@ var countryarr = [
 ["MOZ","255,192,203"], 
 ["NIC","255,125,0"], 
 ["NGA","255,125,0"], 
-["PAK","70,130,180"], 
+["PAK","255,125,0"],  
 ["PSE","255,125,0"], 
 ["POL","255,0,255"], 
-["IND","255,0,0"], 
 ["RUS","255,0,255"], 
 ["RWA","138,43,226"], 
 ["RWA2","138,43,226"], 
 ["RWA3","138,43,226"], 
 ["SLV","255,125,0"], 
 ["SRB","0,255,0"],
-["SUD","255,255,0"], 
-["SUD2","255,255,0"], 
+["SSD","255,255,0"], 
+["SSD2","255,255,0"], 
 ["SYR","0,255,0"],
 ["SYR2","0,255,0"],
 ["SYR3","0,255,0"],
@@ -170,10 +169,20 @@ var countryarr = [
 ["UGA3","255,255,255"], 
 ["VNM","255,255,0"], 
 ["VNM2","255,255,0"], 
-["ZWE","138,43,226"],
-["ZWE2","138,43,226"],
-["ZWE3","138,43,226"]
+["ZWE","70,130,180"], 
+["ZWE2","70,130,180"], 
+["ZWE3","70,130,180"]
 ];
+
+function getAllCountries() {
+	var countrySet = new Set()
+	for (var i in countryarr) {
+		countrySet.add(countryarr[i][0]);
+	}
+	return countrySet;
+}
+allCountries = getAllCountries();
+console.log(allCountries)
 
 var year_start = 1940;
 var year_end = 2015;
@@ -192,11 +201,13 @@ var descript = [
 //this object map decades to countries and their migration size
 var decadeCountries = [
 // 1940 to 1949
-[["RUS",10000000], ["POL", 1500000], ["CZE",1500000], ["IND",7000000], ["PAK",7000000], ["PSE", 750000]],
+[["RUS",1000000], ["POL", 1500000], ["CZE",1500000], ["IND",7000000], ["PAK",7000000], ["PSE", 1000000]],
 // 50s
-[["CHN",385000], ["VNM", 1000000,], ["HUN", 200000 ]],
-[["DZA",1200000 ],["DZA2",1200000], ["RWA", 150000], ["RWA2", 150000], ["RWA3", 150000], ["VNM2",2700000], ["ISR",300000 ], ["NGA", 2000000]],
-[["PAK",10000000],["UGA", 50000],["UGA2", 50000],["UGA3", 50000],["LAO",120000],["KHM", 375000],["MOZ", 5700000],["MMR", 250000], ["ERI", 500000],["ETH",620000], ["AFG",6300000],["ZWE",210000],["ZWE2",210000],["ZWE3",210000]],
+[["CHN",385000], ["VNM", 1000000,], ["HUN", 700000 ]],
+// 60s
+[["DZA",1200000 ],["DZA2",1200000], ["RWA", 1500000], ["RWA2", 150000], ["RWA3", 150000], ["VNM2",2700000], ["ISR",3000000 ], ["NGA", 2000000]],
+// 70s
+[["PAK",10000000],["UGA", 80000],["UGA2", 80000],["UGA3", 80000],["LAO",120000],["KHM", 375000],["MOZ", 5700000],["MMR", 250000], ["ERI", 500000],["ETH",620000], ["AFG",6300000],["ZWE",410000],["ZWE2",210000],["ZWE3",210000]],
 // 80s
 [["NIC",500000],["SLV", 500000], ["GTM",500000], ["GTM2",500000], ["SRB",350000],["GEO",320000]],
 //90s
@@ -204,7 +215,7 @@ var decadeCountries = [
 // 2000s
 [["COL",5841040 ],["IRQ",1900000],["IRQ2",1900000]],
 // 2010s
-[["COL",5841040 ],["IRQ",1900000],["IRQ2",1900000], ["MMR",891000], ["SYR",500000], ["SYR2",500000], ["SYR3",500000], ["SYR4",1000000], ["SYR5",700000], ["SYR6",600000], ["SYR7",800000], ["SUD", 1100000], ["SUD2", 1100000]]
+[["COL",5841040 ],["IRQ",1900000],["IRQ2",1900000], ["MMR",891000], ["SYR",500000], ["SYR2",500000], ["SYR3",500000], ["SYR4",1000000], ["SYR5",700000], ["SYR6",400000], ["SYR7",800000], ["SSD", 1100000], ["SSD2", 1100000]]
 ];
 
 function init2d(x,y, value) {
@@ -215,7 +226,8 @@ function init2d(x,y, value) {
     return arr2D;
 }
 
-var ctydist = init2d(23,71,0)
+// we need 24 rows to handle exception when calculating numdecade line 813
+var ctydist = init2d(24,71,0)
 
 function findIndex(countryCode) {
 	for (var i in countryarr) {
@@ -224,6 +236,24 @@ function findIndex(countryCode) {
 		}
 	}
 	return -1;
+}
+// given a decade index, find set of countries
+function getCountriesForDecade(decadeIdx) {
+	result = new Set();
+	for (var i in decadeCountries[decadeIdx]) {
+		result.add(decadeCountries[decadeIdx][i][0])
+	}
+	return result;
+}
+
+function findColor(countryCode) {
+	for (var i in countryarr) {
+		if (countryCode == countryarr[i][0].slice(0,3)) {
+			console.log(countryarr[i][0]);
+			return ("rgb(" + countryarr[i][1] + ")");
+		}
+	}
+	return "rgb(0,0,0)";
 }
 
 for (var i in decadeCountries) {
@@ -309,7 +339,6 @@ var speedmult = 0.7;
 var speedadjust = 0;
 
 
-
 var opacityscale = d3.scale.sqrt().domain([0,2,30,100,300]).range([0,0,0.7,0.9,0.99]);
 
 
@@ -361,33 +390,37 @@ var migrationlabel = svg.append("text").attr("x", xstart + xoffset).attr("y", ys
 svg.append("text").attr("x", xstart).attr("y", ystart + yoffset2*2 + yoffset).text("Top Events").style("fill","grey").style("font-size",font1);
 
 var ranklabels = svg.selectAll(".countrylabels")
-   .data([["Post World War II",0, "RUS"], 
-          ["Partition of India and Pakistan",1, "IND"], 
-          ["Establishment of the Jewish State",2, "PSE" ], 
-          ["Chinese Cultural Revolution",3, "CHN"], 
-          ["Formation of a communist government in North Vietnam",4, "VNM"], 
-          ["Soviet suppression of a Hungarian uprising",5, "HUN"], 
-          ["Vietnam War",6, "VNM2"], 
-          ["Biafran War",7, "NGA"], 
-          ["Algerian war of independence",8, "DZA"], 
-          ["Soviet invasion of Afghanistan",9, "AFG"], 
-          ["Civil War in Mozambique",10, "MOZ"], 
-          ["Bangadesh War of Independence",11, "MMR"], 
-          ["Civil War in Central America",12, "NIC"], 
-          ["Serbian revocation of Kosovo's independent status",13, "SRB"], 
-          ["Secessionist fighting in Georgia",14, "GEO"], 
-          ["Iraqi suppression of rebel movement",15, "IRQ"], 
-          ["Rwandan genocide",16, "RWA"], 
-          ["Breakup of Yugoslavia",17, "BIH"],          
-          ["Civil conflict in Columbia", 18, "COL"],
-          ["US Invasion of Iraq", 19, "IRQ"],
+   .data([["Post World War II",0, "RUS", "https://en.wikipedia.org/wiki/World_War_II_evacuation_and_expulsion"], 
+          ["Partition of India and Pakistan",1, "IND", "https://en.wikipedia.org/wiki/Partition_of_India"], 
+          ["Establishment of the Jewish State",2, "PSE", "https://en.wikipedia.org/wiki/Jewish_state"], 
+          ["Chinese Cultural Revolution",3, "CHN", "https://en.wikipedia.org/wiki/Cultural_Revolution"], 
+          ["Formation of a communist government in North Vietnam",4, "VNM", "https://en.wikipedia.org/wiki/Communism_in_Vietnam"], 
+          ["Soviet suppression of a Hungarian uprising",5, "HUN", "https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1956"], 
+          ["Vietnam War",6, "VNM2", "https://en.wikipedia.org/wiki/Vietnam_War"], 
+          ["Biafran War",7, "NGA", "https://en.wikipedia.org/wiki/Nigerian_Civil_War"], 
+          ["Algerian war of independence",8, "DZA", "https://en.wikipedia.org/wiki/Algerian_War"], 
+          ["Soviet invasion of Afghanistan",9, "AFG", "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War"], 
+          ["Civil War in Mozambique",10, "MOZ", "https://en.wikipedia.org/wiki/Mozambican_Civil_War"], 
+          ["Bangaladesh War of Independence",11, "MMR", "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War"], 
+          ["Civil War in Central America",12, "NIC", "https://en.wikipedia.org/wiki/Salvadoran_Civil_War"], 
+          ["Serbian revocation of Kosovo's independent status",13, "SRB", "https://en.wikipedia.org/wiki/Anti-bureaucratic_revolution"], 
+          ["Secessionist fighting in Georgia",14, "GEO", "https://en.wikipedia.org/wiki/Georgian_Civil_War"], 
+          ["Iraqi suppression of rebel movement",15, "IRQ", "https://en.wikipedia.org/wiki/1991_uprisings_in_Iraq"], 
+          ["Rwandan genocide",16, "RWA", "https://en.wikipedia.org/wiki/Rwandan_genocide"], 
+          ["Breakup of Yugoslavia",17, "BIH", "https://en.wikipedia.org/wiki/Breakup_of_Yugoslavia"],          
+          ["Civil conflict in Colombia", 18, "COL", "https://en.wikipedia.org/wiki/Colombian_conflict"],
+          ["US Invasion of Iraq", 19, "IRQ", "https://en.wikipedia.org/wiki/2003_invasion_of_Iraq"],
           ["", 20],
-          ["War in Syria", 21, "SYR"],
-          ["Civil conflict in Columbia", 22, "COL"],
-          ["South Sudanese Civil War", 23, "SUD"]]
+          ["War in Syria", 21, "SYR", "https://en.wikipedia.org/wiki/Syrian_Civil_War"],
+          ["Civil conflict in Columbia", 22, "COL", "https://en.wikipedia.org/wiki/Colombian_conflict"],
+          ["South Sudanese Civil War", 23, "SSD", "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War"]]
           )
           
-   .enter().append("text")
+   .enter()
+   .append("svg:a")
+   .attr("xlink:href", function(d){return d[3];})
+   .attr("target", "_newtab")
+   .append("text")
    .attr("x", xstart + xoffset + 30).attr("y",800)
    .text(function(d) { return d[0];} )
    .style("fill", function(d) {
@@ -408,6 +441,7 @@ svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2*2 + y
 svg.append("text").attr("x", xstart + xoffset).attr("y", ystart + yoffset2*2 + yoffset + rankoffset*3).text("3.").style("fill","rgb(200,200,200)").style("font-size",font2);
 
 
+
 d3.json("worldc11.json", function(error, world) {
   if (error) throw error;
 
@@ -424,6 +458,8 @@ while(x < len){
 return my_array
 }
 
+
+
   var g = svg.append("g");
   var worldmap =
     g.selectAll("path")
@@ -433,10 +469,15 @@ return my_array
       .attr("d", path)
       .style("stroke","rgb(255,255,255)")
       .style("stroke-width",0.5)
-      .style("fill", function(d) {
+      //.style("fill", "blue")
+	  .style("fill", function(d) {return findColor(d.properties.adm0_a3);})
+	  //function(d) {
+		  //console.log(d.properties.adm0_a3, console.log(findColor(d.properties.adm0_a3));
+		  //findColor(d.properties.adm0_a3)
            // if (d.properties.adm0_a3 == "USA") {return "black";}
            // if (d.properties.adm0_a3 == "RUS") {return "rgb(138,43,226)";}
            // return colors[d.properties.mapcolor13];
+		   /*
             if (d.properties.adm0_a3 == "AFG") {return "blue";}
 			if (d.properties.adm0_a3 == "ARM") {return "blue";}
 			if (d.properties.adm0_a3 == "AZE") {return "blue";}
@@ -470,15 +511,16 @@ return my_array
 			if (d.properties.adm0_a3 == "TJK") {return "blue";}
 			if (d.properties.adm0_a3 == "UGA") {return "blue";}
 			if (d.properties.adm0_a3 == "VNM") {return "blue";}
-			if (d.properties.adm0_a3 == "ZWE") {return "blue";}
+			if (d.properties.adm0_a3 == "ZWE") {return "blue";}		  
             return "black";
-       })
+			*/
+	  //})
        .attr("class",function(d){
          
            if (d.properties.adm0_a3 == "USA") {return "usa";}
            else { return "other"; }
        })
-       .style("stroke-opacity", 0.6)
+       .style("stroke-opacity", 0.7)
        .style("fill-opacity", 0)
        .attr("class",function(d){ if (d.properties.num > 36) {return "group1";} else { return "group2";} });
 
@@ -581,7 +623,9 @@ if (yr%2 == 0){
 } else {
      d3.selectAll(".group2").style("fill-opacity",function(d){
          var numdecade;
-         if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
+         //if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
+         //else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
+		 if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
          else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
@@ -707,6 +751,15 @@ d3timer.stop();
 
 //starttimer();
 
+//Ex: search VNM2 in the list of countrySet with VNM in it 
+function countrySetHasSubstring(countrySet, country) {
+	for (let c of countrySet)  {
+		if (c.substring(0,3) == country) 
+			return c;
+	}
+	return null;
+}
+
 function timerfunction() {
         
         context.clearRect(0, 0, canvas.width, canvas.height);
@@ -735,13 +788,15 @@ function timerfunction() {
         context.arc(usacoords[0][0], usacoords[0][1], 60, 0, Math.PI*2, true);
 
         context.closePath();
-    var gradient = gradient = context.createRadialGradient(usacoords[0][0], usacoords[0][1], 0, usacoords[0][0], usacoords[0][1], 60*opacityscale(usascale));
+    //Remove the highlight of USA
+    var gradient = gradient = context.createRadialGradient(usacoords[0][0], usacoords[0][1], 0, usacoords[0][0], usacoords[0][1], 0*opacityscale(usascale));
     gradient.addColorStop(0, 'rgba('+ '255,255,255' + ',' + opacityscale(usascale)*0.5 +')');
     gradient.addColorStop(0.4, 'rgba('+ '255,255,255' + ',' + opacityscale(usascale)*0.3 +')');
     gradient.addColorStop(0.8, 'rgba('+ '255,255,255' + ',' + opacityscale(usascale)*0.1 +')');
     gradient.addColorStop(1.0, 'rgba('+ '255,255,255' + ',0)');
-    context.fillStyle = gradient;
-    context.fill();
+    //disabled the 'splash' effect in USA
+	//context.fillStyle = gradient;
+    //context.fill();
 
 
 
@@ -805,13 +860,51 @@ if (d3.select("#playbutton").property("value") == "stop"){
      countrydist = sumarrays(countrydist, ctydist[Math.floor(yr/10)-194],yr);
      if (yr < 2010) {dotstotal = dotstotal + ctytotal[Math.floor(yr/10)-194]/10;}
      else {dotstotal = dotstotal + ctytotal[yr-1991];}
-     
+
 if (yr%2 == 0){
      d3.selectAll(".group1").transition().duration(1000).style("fill-opacity",function(d){
-         var numdecade;
+// Thong's new code to calculate opacity
+         var decadeidx = Math.floor(yr/10)-194;
+         countrySet = getCountriesForDecade(decadeidx);
+         // find the countries relevant to this decade and set opacity scale
+         opacscale = 0;
+         if (countrySet.has(d.properties.adm0_a3)) {
+             countryScale = ctydist[decadeidx][findIndex(d.properties.adm0_a3)]
+             opacscale = opacityscale(countryScale);
+         }
+         else {
+        	 country = countrySetHasSubstring(countrySet, d.properties.adm0_a3) 
+        	 if (country != null) {
+                 countryScale = ctydist[decadeidx][findIndex(country)]
+                 opacscale = opacityscale(countryScale);        		 
+        	 }        	 
+         }
+         return opacscale;
+     });
+} else {
+     d3.selectAll(".group2").transition().duration(1000).style("fill-opacity",function(d){
+         var decadeidx = Math.floor(yr/10)-194;
+         countrySet = getCountriesForDecade(decadeidx);
+         // find the countries relevant to this decade and set opacity scale
+         opacscale = 0;
+         if (countrySet.has(d.properties.adm0_a3)) {
+             countryScale = ctydist[decadeidx][findIndex(d.properties.adm0_a3)]
+             opacscale = opacityscale(countryScale);
+         }
+         else {
+        	 country = countrySetHasSubstring(countrySet, d.properties.adm0_a3) 
+        	 if (country != null) {
+                 countryScale = ctydist[decadeidx][findIndex(country)]
+                 opacscale = opacityscale(countryScale);        		 
+        	 }        	 
+         }
+         return opacscale;
+/*
+    	 var numdecade;
 //       if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
 //       else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
-         numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
+         //numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.num)];
+		 numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.adm0_a3)]*5;
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
      });
@@ -820,9 +913,11 @@ if (yr%2 == 0){
          var numdecade;
 //       if (yr > 2009) { numdecade = ctydist[yr-1991][d.properties.num]*10; }
 //       else {numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num]; }
-         numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
+         numdecade = ctydist[Math.floor(yr/10)-194][findIndex(d.properties.adm0_a3)]*5;
+		 //numdecade = ctydist[Math.floor(yr/10)-194][d.properties.num];
          if (d.properties.num > 67) { numdecade = numdecade / 7; }
          return opacityscale(numdecade);
+*/
      });
 }
 
