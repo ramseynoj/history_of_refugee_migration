@@ -371,7 +371,7 @@ var svg = d3.select("svg").append("svg")
 
 
 
-var yearlabel = svg.append("text").attr("x", 452).attr("y", 658).text("1940").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
+var yearlabel = svg.append("text").attr("x", 582).attr("y", 658).text("1940").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
 
 
 var ystart = 520;
@@ -536,7 +536,7 @@ return my_array
 
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 476 + 3.74*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 3.74*(yr-year_start));
      ///labelindex controls the movement of the Total migration
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
@@ -587,7 +587,7 @@ if (yr%2 == 0){
 
   d3.select("#yearslider").on("change", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 476 + 6*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 6*(yr-year_start));
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
     	 labelindex = descript.len - 2;
@@ -837,7 +837,7 @@ if (d3.select("#playbutton").property("value") == "stop"){
 
 
      if (yr < year_end) {
-     yearlabel.text(yr).attr("x", 3.8*(yr-1820));
+     yearlabel.text(yr).attr("x", 130 + 3.8*(yr-1820));
      d3.select("#yearslider")
 	.property("value", yr);
         
