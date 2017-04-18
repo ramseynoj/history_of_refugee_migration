@@ -536,7 +536,7 @@ return my_array
 
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 582 + 3.74*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 3.74*(yr-year_start));
      ///labelindex controls the movement of the Total migration
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
@@ -587,7 +587,7 @@ if (yr%2 == 0){
 
   d3.select("#yearslider").on("change", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 582 + 6*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 6*(yr-year_start));
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
     	 labelindex = descript.len - 2;
