@@ -182,7 +182,7 @@ function getAllCountries() {
 	return countrySet;
 }
 allCountries = getAllCountries();
-console.log(allCountries)
+//console.log(allCountries)
 
 var year_start = 1940;
 var year_end = 2015;
@@ -201,7 +201,7 @@ var descript = [
 //this object map decades to countries and their migration size
 var decadeCountries = [
 // 1940 to 1949
-[["RUS",1000000], ["POL", 1500000], ["CZE",1500000], ["IND",7000000], ["PAK",7000000], ["PSE", 1000000]],
+[["RUS",6000000], ["POL", 3500000], ["CZE",3500000], ["IND",7000000], ["PAK",7000000], ["PSE", 1000000]],
 // 50s
 [["CHN",385000], ["VNM", 1000000,], ["HUN", 700000 ]],
 // 60s
@@ -249,7 +249,6 @@ function getCountriesForDecade(decadeIdx) {
 function findColor(countryCode) {
 	for (var i in countryarr) {
 		if (countryCode == countryarr[i][0].slice(0,3)) {
-			console.log(countryarr[i][0]);
 			return ("rgb(" + countryarr[i][1] + ")");
 		}
 	}
@@ -602,8 +601,9 @@ if (yr%2 == 0){
 
      speedadjust = 0;
 
-     decadelabel.text(descript[labelindex][15]);
-     migrationlabel.text(d3.format("n")(descript[labelindex][14]));
+     decadelabel.text(descript[labelindex][descript[labelindex].length -1]);
+     migrationlabel.text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
+
      ranklabels.transition().attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
