@@ -182,7 +182,7 @@ function getAllCountries() {
 	return countrySet;
 }
 allCountries = getAllCountries();
-console.log(allCountries)
+//console.log(allCountries)
 
 var year_start = 1940;
 var year_end = 2015;
@@ -201,7 +201,7 @@ var descript = [
 //this object map decades to countries and their migration size
 var decadeCountries = [
 // 1940 to 1949
-[["RUS",1000000], ["POL", 1500000], ["CZE",1500000], ["IND",7000000], ["PAK",7000000], ["PSE", 1000000]],
+[["RUS",6000000], ["POL", 3500000], ["CZE",3500000], ["IND",7000000], ["PAK",7000000], ["PSE", 1000000]],
 // 50s
 [["CHN",385000], ["VNM", 1000000,], ["HUN", 700000 ]],
 // 60s
@@ -249,7 +249,6 @@ function getCountriesForDecade(decadeIdx) {
 function findColor(countryCode) {
 	for (var i in countryarr) {
 		if (countryCode == countryarr[i][0].slice(0,3)) {
-			console.log(countryarr[i][0]);
 			return ("rgb(" + countryarr[i][1] + ")");
 		}
 	}
@@ -371,7 +370,7 @@ var svg = d3.select("svg").append("svg")
 
 
 
-var yearlabel = svg.append("text").attr("x", 452).attr("y", 658).text("1940").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
+var yearlabel = svg.append("text").attr("x", 582).attr("y", 658).text("1940").style("fill","white").style("font-size","26px").style("fill","rgb(200,200,200)").attr("text-anchor","start");
 
 
 var ystart = 520;
@@ -536,7 +535,7 @@ return my_array
 
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 476 + 3.74*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 3.74*(yr-year_start));
      ///labelindex controls the movement of the Total migration
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
@@ -587,7 +586,7 @@ if (yr%2 == 0){
 
   d3.select("#yearslider").on("change", function() {
         yr = this.value;
-     yearlabel.text(yr).attr("x", 476 + 6*(yr-year_start));
+     yearlabel.text(yr).attr("x", 606 + 6*(yr-year_start));
      labelindex = Math.floor(yr/10)-194;
      if (yr > 2009) { 
     	 labelindex = descript.len - 2;
@@ -602,8 +601,9 @@ if (yr%2 == 0){
 
      speedadjust = 0;
 
-     decadelabel.text(descript[labelindex][15]);
-     migrationlabel.text(d3.format("n")(descript[labelindex][14]));
+     decadelabel.text(descript[labelindex][descript[labelindex].length -1]);
+     migrationlabel.text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
+
      ranklabels.transition().attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
@@ -837,7 +837,7 @@ if (d3.select("#playbutton").property("value") == "stop"){
 
 
      if (yr < year_end) {
-     yearlabel.text(yr).attr("x", 3.8*(yr-1820));
+     yearlabel.text(yr).attr("x", 130 + 3.8*(yr-1820));
      d3.select("#yearslider")
 	.property("value", yr);
         
