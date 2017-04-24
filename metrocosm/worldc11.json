@@ -31857,7 +31857,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Pakistan",
                         "adm0_a3": "PAK",
                         "mapcolor9": 3,
                         "mapcolor13": 11,
@@ -32066,7 +32066,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Tanzania",
                         "adm0_a3": "TZA",
                         "mapcolor9": 2,
                         "mapcolor13": 2,
@@ -32108,7 +32108,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Cambodia",
                         "adm0_a3": "KHM",
                         "mapcolor9": 6,
                         "mapcolor13": 5,
@@ -32286,7 +32286,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Europe",
+                        "admin": "Croatia",
                         "adm0_a3": "HRV",
                         "mapcolor9": 5,
                         "mapcolor13": 1,
@@ -32527,7 +32527,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Laos",
                         "adm0_a3": "LAO",
                         "mapcolor9": 1,
                         "mapcolor13": 9,
@@ -32777,7 +32777,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Nigeria",
                         "adm0_a3": "NGA",
                         "mapcolor9": 5,
                         "mapcolor13": 2,
@@ -32841,7 +32841,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Zimbabwe",
                         "adm0_a3": "ZWE",
                         "mapcolor9": 3,
                         "mapcolor13": 9,
@@ -33030,7 +33030,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Uganda",
                         "adm0_a3": "UGA",
                         "mapcolor9": 6,
                         "mapcolor13": 4,
@@ -33136,7 +33136,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Geogia",
                         "adm0_a3": "GEO",
                         "mapcolor9": 3,
                         "mapcolor13": 2,
@@ -33241,7 +33241,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Afganishtan",
                         "adm0_a3": "AFG",
                         "mapcolor9": 8,
                         "mapcolor13": 7,
@@ -33376,7 +33376,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Mozambique",
                         "adm0_a3": "MOZ",
                         "mapcolor9": 1,
                         "mapcolor13": 4,
@@ -33397,7 +33397,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Tajikistan",
                         "adm0_a3": "TJK",
                         "mapcolor9": 2,
                         "mapcolor13": 5,
@@ -33803,7 +33803,7 @@
                     ],
                     "type": "MultiPolygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Indonesia",
                         "adm0_a3": "IDN",
                         "mapcolor9": 6,
                         "mapcolor13": 11,
@@ -33878,7 +33878,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Congo",
                         "adm0_a3": "COD",
                         "mapcolor9": 4,
                         "mapcolor13": 7,
@@ -34197,7 +34197,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Rwanda",
                         "adm0_a3": "RWA",
                         "mapcolor9": 3,
                         "mapcolor13": 10,
@@ -34462,7 +34462,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "South Sudan",
                         "adm0_a3": "SSD",
                         "mapcolor9": 3,
                         "mapcolor13": 5,
@@ -34536,7 +34536,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Burma",
                         "adm0_a3": "MMR",
                         "mapcolor9": 5,
                         "mapcolor13": 13,
@@ -34932,7 +34932,7 @@
                     ],
                     "type": "MultiPolygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Azerbaijan",
                         "adm0_a3": "AZE",
                         "mapcolor9": 5,
                         "mapcolor13": 8,
@@ -35295,7 +35295,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Algeria",
                         "adm0_a3": "DZA",
                         "mapcolor9": 6,
                         "mapcolor13": 3,
@@ -35380,7 +35380,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Eritrea",
                         "adm0_a3": "ERI",
                         "mapcolor9": 2,
                         "mapcolor13": 12,
@@ -35484,7 +35484,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Africa",
+                        "admin": "Malawi",
                         "adm0_a3": "MWI",
                         "mapcolor9": 4,
                         "mapcolor13": 5,
@@ -35529,7 +35529,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Iraq",
                         "adm0_a3": "IRQ",
                         "mapcolor9": 3,
                         "mapcolor13": 1,
@@ -35785,7 +35785,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Europe",
+                        "admin": "Bosnia",
                         "adm0_a3": "BIH",
                         "mapcolor9": 1,
                         "mapcolor13": 2,
@@ -35978,7 +35978,7 @@
                     ],
                     "type": "Polygon",
                     "properties": {
-                        "admin": "Other Asia",
+                        "admin": "Armenia",
                         "adm0_a3": "ARM",
                         "mapcolor9": 2,
                         "mapcolor13": 10,

@@ -637,6 +637,30 @@ if (yr%2 == 0){
   });
 
 
+  //Hover and tooltips
+  var tooltip = d3.select("body")
+	.append("div")
+	.style("position", "absolute")
+	.style("z-index", "15")
+	.style("visibility", "hidden")
+	.text("a simple tooltip")
+	.style("color", "#D0D0D0")
+	;
+	
+  d3.selectAll(".group2")
+	//.style("stroke-width", "1.5")
+	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(d.properties.admin);})
+	//.on("mouseover", function(d) {return this.style("stroke-width", "3");})
+	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+	.on("mouseout", function(d) {return tooltip.style("visibility", "hidden");})
+  ;
+  
+    d3.selectAll(".group1")
+	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(d.properties.admin);})
+	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+	.on("mouseout", function(d) {return tooltip.style("visibility", "hidden");})
+  ;
+  
   d3.select("#playbutton").on("click", function() {
 
 	if (this.value == "play"){
