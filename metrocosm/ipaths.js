@@ -223,7 +223,7 @@ var ctryCodes = [
 ["Ukraine", "UKR"], ["United Arab Emirates", "ARE"], ["United Kingdom", "GBR"], ["United States of America", "USA"],
 ["United States Minor Outlying Islands", "UMI"], ["Uruguay", "URY"], ["Uzbekistan", "UZB"], ["Vanuatu", "VUT"], ["Vatican City State (Holy See)", "VAT"],
 ["Venezuela", "VEN"], ["Viet Nam", "VNM"], ["Virgin Islands (British)", "VGB"], ["Virgin Islands (U.S.)", "VIR"], ["Wallis and Futuna Islands", "WLF"],
-["Western Sahara", "ESH"], ["Yemen", "YEM"], ["Yugoslavia", "YUG"], ["Zambia", "ZMB"], ["Zimbabwe", "ZWE"]
+["Western Sahara", "ESH"], ["Yemen", "YEM"], ["Yugoslavia", "YUG"], ["Zambia", "ZMB"], ["Zimbabwe", "ZWE"], ["South Sudan", "SSD"]
 ];
 
 function getAllCountries() {
@@ -316,6 +316,18 @@ function findColor(countryCode) {
 	return "rgb(0,0,0)";
 }
 
+function cumeCount(x, yr) {
+	total = 0;
+	for (i = 0; i < x; i++) {
+		total += descript[i][descript[x].length -2]
+	};
+	total += descript[x][descript[x].length -2] * Math.floor(yr % 10) / 10;
+	f = d3.format("n")
+	
+	return f(total)
+}
+//1960 = 42085000
+//1961 = 42600000
 for (var i in decadeCountries) {
 	for (var j in decadeCountries[i]) {
 		// find index for the country
@@ -325,6 +337,8 @@ for (var i in decadeCountries) {
 		ctydist[i][index] = decadeCountries[i][j][1] / 10000;
 	}
 }
+
+
 
 var ctytotal = [2500, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000];
 
@@ -594,6 +608,21 @@ return my_array
       .style("fill","transparent")
        .style("pointer-events","none");
 
+	var counter = d3.select("svg")
+		.append("text")
+		.attr("class", "counter")
+		//.style("position", "absolute")
+		.attr("x", 40)
+		.attr("y", 475)
+		.style("z-index", "15")
+		//.attr("width", 200)
+		//.attr("height", 200)
+		.style("font-family", "Mukta Vaani")
+		.style("font-size", "18px")
+		.style("fill", "rgb(200,200,200)")
+		.text("Total Migration: 0");
+	   
+	   
   d3.select("#yearslider").on("input", function() {
         yr = this.value;
      yearlabel.text(yr).attr("x", 606 + 3.74*(yr-year_start));
@@ -613,7 +642,7 @@ return my_array
      countrydist = sumarrays(countrydist,ctydist[labelindex], yr);
 
      speedadjust = 0;
-
+	 counter.text("Total Migrants: " + cumeCount(labelindex, yr));
      decadelabel.text(descript[labelindex][descript[labelindex].length -1]);
      migrationlabel.text(descript[labelindex][descript[labelindex].length -2]);
      ranklabels.transition().attr("y",function(d){
@@ -621,7 +650,7 @@ return my_array
      });
 
      labelindexold = labelindex;
-
+	//counter.text(function() {return "Total Migration:" & str(descript[Math.floor(yr/10)-194][24]);});
      var annualtotal = ctytotal[Math.floor(yr/10)-194]/10;
      if (yr > 2009) { annualtotal = ctytotal[yr-1991]; }
 
@@ -661,7 +690,7 @@ if (yr%2 == 0){
      countrydist = sumarrays(countrydist,ctydist[labelindex], yr);
 
      speedadjust = 0;
-
+	 counter.text("Total Migrants: " + cumeCount(labelindex, yr));
      decadelabel.text(descript[labelindex][descript[labelindex].length -1]);
      migrationlabel.text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
 
@@ -670,6 +699,7 @@ if (yr%2 == 0){
      });
 
      labelindexold = labelindex;
+	 counter.text(function() {return "Total Migration:" & str(descript[Math.floor(yr/10)-194][24]);});
 
      var annualtotal = ctytotal[Math.floor(yr/10)-194]/10;
      if (yr > 2009) { annualtotal = ctytotal[yr-1991]; }
@@ -715,24 +745,27 @@ if (yr%2 == 0){
   d3.selectAll(".group2")
 	//.style("stroke-width", "1.5")
 	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(codeToCountry(d.properties.adm0_a3));
-									d3.select(this).style("stroke-width", "2");})
+									d3.select(this).transition(500).style("stroke-width", "1").style("stroke-opacity", "1");})
 	//.on("mouseover", function(d) {return this.style("stroke-width", "3");})
 	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
 	.on("mouseout", function(d) {tooltip.style("visibility", "hidden");
-									d3.select(this).style("stroke-width", "0.5");})
+									d3.select(this).transition(500).style("stroke-width", "0.5").style("stroke-opacity", "0.7");})
   ;
   
    d3.selectAll(".group1")
 	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(codeToCountry(d.properties.adm0_a3));
-									d3.select(this).style("stroke-width", "2");})
+									d3.select(this).transition(500).style("stroke-width", "1").style("stroke-opacity", "1");})
 	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
 	.on("mouseout", function(d) {tooltip.style("visibility", "hidden");
-									d3.select(this).style("stroke-width", "0.5");})
+									d3.select(this).transition(500).style("stroke-width", "0.5").style("stroke-opacity", "0.7");})
   ;
   
 	//d3.selectAll(".group1")
 		//.on("mouseover", function(d) {this.style("stroke-width", 3);})
 	//;
+
+
+		
 	
   d3.select("#playbutton").on("click", function() {
 
@@ -944,10 +977,11 @@ if (d3.select("#playbutton").property("value") == "stop"){
      }
 */     
 //     console.log(labelindex)
-
+	 counter.text("Total Migrants: " + cumeCount(labelindex, yr));
      if(labelindex !== labelindexold) {
      decadelabel.transition().text(descript[labelindex][descript[labelindex].length -1]);
-     migrationlabel.transition().text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
+     
+	 migrationlabel.transition().text(d3.format("n")(descript[labelindex][descript[labelindex].length-2]));
      ranklabels.transition().duration(1000).attr("y",function(d){
          return ystart + yoffset2*2 + yoffset + descript[labelindex][d[1]]*rankoffset;
      });
