@@ -174,6 +174,58 @@ var countryarr = [
 ["ZWE3","70,130,180"]
 ];
 
+var ctryCodes = [
+["Afghanistan", "AFG"], ["Albania", "ALB"], ["Algeria", "DZA"], ["American Samoa", "ASM"],
+["Andorra", "AND"], ["Angola", "AGO"], ["Anguilla", "AIA"], ["Antarctica", "ATA"],
+["Antigua and Barbuda", "ATG"], ["Argentina", "ARG"], ["Armenia", "ARM"], ["Aruba", "ABW"],
+["Australia", "AUS"], ["Austria", "AUT"], ["Azerbaijan", "AZE"], ["Bahamas", "BHS"],
+["Bahrain", "BHR"], ["Bangladesh", "BGD"], ["Barbados", "BRB"], ["Belarus", "BLR"],
+["Belgium", "BEL"], ["Belize", "BLZ"], ["Benin", "BEN"], ["Bermuda", "BMU"],
+["Bhutan", "BTN"], ["Bolivia", "BOL"], ["Bosnia and Herzegowina", "BIH"],
+["Botswana", "BWA"], ["Bouvet Island", "BVT"], ["Brazil", "BRA"], ["British Indian Ocean Territory", "IOT"],
+["Brunei Darussalam", "BRN"], ["Bulgaria", "BGR"], ["Burkina Faso", "BFA"], ["Burundi", "BDI"], ["Cambodia", "KHM"],
+["Cameroon", "CMR"], ["Canada", "CAN"], ["Cape Verde", "CPV"], ["Cayman Islands", "CYM"], ["Central African Republic", "CAF"],
+["Chad", "TCD"], ["Chile", "CHL"], ["China", "CHN"], ["Christmas Island", "CXR"], ["Cocos (Keeling) Islands", "CCK"], ["Colombia", "COL"],
+["Comoros", "COM"], ["Congo, Democratic Republic (Zaire)", "COD"], ["Congo, People's Republic", "COG"], ["Cook Islands", "COK"],
+["Costa Rica", "CRI"], ["Cote D'Ivoire", "CIV"], ["Croatia (Hrvatska)", "HRV"], ["Cuba", "CUB"], ["Cyprus", "CYP"],
+["Czech Republic", "CZE"], ["Denmark", "DNK"], ["Djibouti", "DJI"], ["Dominica", "DMA"], ["Dominican Republic", "DOM"],
+["East Timor", "TLS"], ["Ecuador", "ECU"], ["Egypt", "EGY"], ["El Salvador", "SLV"], ["Equatorial Guinea", "GNQ"],
+["Eritrea", "ERI"], ["Estonia", "EST"], ["Ethiopia", "ETH"], ["Falkland Islands (Malvinas)", "FLK"], ["Faroe Islands", "FRO"],
+["Fiji", "FJI"], ["Finland", "FIN"], ["France", "FRA"], ["France, Metropolitan", "FXX"],
+["French Guiana", "GUF"], ["French Polynesia", "PYF"], ["French Southern Territories", "ATF"], ["Gabon", "GAB"],
+["Gambia", "GMB"], ["Georgia", "GEO"], ["Germany", "DEU"], ["Ghana", "GHA"], ["Gibraltar", "GIB"], ["Greece", "GRC"],
+["Greenland", "GRL"], ["Grenada", "GRD"], ["Guadeloupe", "GLP"], ["Guam", "GUM"], ["Guatemala", "GTM"], ["Guinea", "GIN"],
+["Guinea-bissau", "GNB"], ["Guyana", "GUY"], ["Haiti", "HTI"], ["Heard and McDonald Islands", "HMD"], ["Honduras", "HND"],
+["Hong Kong", "HKG"], ["Hungary", "HUN"], ["Iceland", "ISL"], ["India", "IND"], ["Indonesia", "IDN"], ["Iran (Islamic Republic)", "IRN"],
+["Iraq", "IRQ"], ["Ireland", "IRL"], ["Israel", "ISR"], ["Italy", "ITA"],
+["Jamaica", "JAM"], ["Japan", "JPN"], ["Jordan", "JOR"], ["Kazakhstan", "KAZ"], ["Kenya", "KEN"], ["Kiribati", "KIR"],
+["Korea, Democratic People's Republic", "PRK"], ["Korea, Republic of", "KOR"], ["Kuwait", "KWT"], ["Kyrgyzstan", "KGZ"],
+["Lao People's Democratic Republic", "LAO"], ["Latvia", "LVA"], ["Lebanon", "LBN"], ["Lesotho", "LSO"], ["Liberia", "LBR"],
+["Libyan Arab Jamahiriya", "LBY"], ["Liechtenstein", "LIE"], ["Lithuania", "LTU"], ["Luxembourg", "LUX"], ["Macau", "MAC"],
+["Macedonia, Former Yugoslav Republic", "MKD"], ["Madagascar", "MDG"], ["Malawi", "MWI"], ["Malaysia", "MYS"],
+["Maldives", "MDV"], ["Mali", "MLI"], ["Malta", "MLT"], ["Marshall Islands", "MHL"], ["Martinique", "MTQ"], ["Mauritania", "MRT"],
+["Mauritius", "MUS"], ["Mayotte", "MYT"], ["Mexico", "MEX"], ["Micronesia, Federated States", "FSM"], ["Moldova, Republic", "MDA"],
+["Monaco", "MCO"], ["Mongolia", "MNG"], ["Montserrat", "MSR"], ["Morocco", "MAR"],
+["Mozambique", "MOZ"], ["Myanmar", "MMR"], ["Namibia", "NAM"], ["Nauru", "NRU"], ["Nepal", "NPL"], ["Netherlands", "NLD"],
+["Netherlands Antilles", "ANT"], ["New Caledonia", "NCL"], ["New Zealand", "NZL"], ["Nicaragua", "NIC"], ["Niger", "NER"],
+["Nigeria", "NGA"], ["Niue", "NIU"], ["Norfolk Island", "NFK"], ["Northern Mariana Islands", "MNP"], ["Norway", "NOR"],
+["Oman", "OMN"], ["Pakistan", "PAK"], ["Palau", "PLW"], ["Palestinian Territory, Occupied", "PSE"], ["Panama", "PAN"],
+["Papua New Guinea", "PNG"], ["Paraguay", "PRY"], ["Peru", "PER"], ["Philippines", "PHL"], ["Pitcairn", "PCN"], ["Poland", "POL"],
+["Portugal", "PRT"], ["Puerto Rico", "PRI"], ["Qatar", "QAT"], ["Reunion", "REU"], ["Romania", "ROU"], ["Russian Federation", "RUS"],
+["Rwanda", "RWA"], ["Saint Kitts and Nevis", "KNA"], ["Saint Lucia", "LCA"], ["Saint Vincent & Grenadines", "VCT"], ["Samoa", "WSM"],
+["San Marino", "SMR"], ["Sao Tome and Principe", "STP"], ["Saudi Arabia", "SAU"], ["Senegal", "SEN"], ["Seychelles", "SYC"],
+["Sierra Leone", "SLE"], ["Singapore", "SGP"], ["Slovakia (Slovak Republic)", "SVK"], ["Slovenia", "SVN"], ["Solomon Islands", "SLB"],
+["Somalia", "SOM"], ["South Africa", "ZAF"], ["South Georgia & South Sandwich Islands", "SGS"], ["Spain", "ESP"], ["Sri Lanka", "LKA"],
+["St. Helena", "SHN"], ["St. Pierre and Miquelon", "SPM"], ["Sudan", "SDN"], ["Suriname", "SUR"], ["Svalbard & Jan Mayen Islands", "SJM"],
+["Swaziland", "SWZ"], ["Sweden", "SWE"], ["Switzerland", "CHE"], ["Syrian Arab Republic", "SYR"], ["Taiwan", "TWN"], ["Tajikistan", "TJK"],
+["Tanzania, United Republic", "TZA"], ["Thailand", "THA"], ["Togo", "TGO"], ["Tokelau", "TKL"], ["Tonga", "TON"], ["Trinidad and Tobago", "TTO"],
+["Tunisia", "TUN"], ["Turkey", "TUR"], ["Turkmenistan", "TKM"], ["Turks and Caicos Islands", "TCA"], ["Tuvalu", "TUV"], ["Uganda", "UGA"],
+["Ukraine", "UKR"], ["United Arab Emirates", "ARE"], ["United Kingdom", "GBR"], ["United States of America", "USA"],
+["United States Minor Outlying Islands", "UMI"], ["Uruguay", "URY"], ["Uzbekistan", "UZB"], ["Vanuatu", "VUT"], ["Vatican City State (Holy See)", "VAT"],
+["Venezuela", "VEN"], ["Viet Nam", "VNM"], ["Virgin Islands (British)", "VGB"], ["Virgin Islands (U.S.)", "VIR"], ["Wallis and Futuna Islands", "WLF"],
+["Western Sahara", "ESH"], ["Yemen", "YEM"], ["Yugoslavia", "YUG"], ["Zambia", "ZMB"], ["Zimbabwe", "ZWE"]
+];
+
 function getAllCountries() {
 	var countrySet = new Set()
 	for (var i in countryarr) {
@@ -227,7 +279,7 @@ function init2d(x,y, value) {
 }
 
 // we need 24 rows to handle exception when calculating numdecade line 813
-var ctydist = init2d(24,71,0)
+var ctydist = init2d(24,71,0);
 
 function findIndex(countryCode) {
 	for (var i in countryarr) {
@@ -237,6 +289,15 @@ function findIndex(countryCode) {
 	}
 	return -1;
 }
+
+function codeToCountry(code) {
+	for (i=0; i <= ctryCodes.length; i++) {
+		if (code == ctryCodes[i][1]) {
+			return ctryCodes[i][0];
+		}
+	}
+	return 'other'
+};
 // given a decade index, find set of countries
 function getCountriesForDecade(decadeIdx) {
 	result = new Set();
@@ -640,27 +701,39 @@ if (yr%2 == 0){
   //Hover and tooltips
   var tooltip = d3.select("body")
 	.append("div")
+	.attr("class", "tooltip")
+	//.class("tooltip")
 	.style("position", "absolute")
 	.style("z-index", "15")
 	.style("visibility", "hidden")
-	.text("a simple tooltip")
+	.style("font-family", "Mukta Vaani")
 	.style("color", "#D0D0D0")
+	.text("a simple tooltip")
+	
 	;
 	
   d3.selectAll(".group2")
 	//.style("stroke-width", "1.5")
-	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(d.properties.admin);})
+	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(codeToCountry(d.properties.adm0_a3));
+									d3.select(this).style("stroke-width", "2");})
 	//.on("mouseover", function(d) {return this.style("stroke-width", "3");})
 	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
-	.on("mouseout", function(d) {return tooltip.style("visibility", "hidden");})
+	.on("mouseout", function(d) {tooltip.style("visibility", "hidden");
+									d3.select(this).style("stroke-width", "0.5");})
   ;
   
-    d3.selectAll(".group1")
-	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(d.properties.admin);})
+   d3.selectAll(".group1")
+	.on("mouseover", function(d) {tooltip.style("visibility", "visible").text(codeToCountry(d.properties.adm0_a3));
+									d3.select(this).style("stroke-width", "2");})
 	.on("mousemove", function(d) {return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
-	.on("mouseout", function(d) {return tooltip.style("visibility", "hidden");})
+	.on("mouseout", function(d) {tooltip.style("visibility", "hidden");
+									d3.select(this).style("stroke-width", "0.5");})
   ;
   
+	//d3.selectAll(".group1")
+		//.on("mouseover", function(d) {this.style("stroke-width", 3);})
+	//;
+	
   d3.select("#playbutton").on("click", function() {
 
 	if (this.value == "play"){
